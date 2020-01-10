@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Student Details</title>
+</head>
+<style>
+    h1{
+        text-decoration: underline;
+        color: red;
+    }
+    body{
+        background-color: aqua;
+        text-align: center;
+    }
+</style>
+<body>
+<h1>{{ studentdata.student_name|capfirst }} Details</h1>
+<h2>Stduent Name: {{ studentdata.student_name|capfirst }}</h2>
+<h2>Course Name: {{ studentdata.course_name|capfirst }}</h2>
+<h2>Course Fee: {{ studentdata.course_fee }}</h2>
+<h2>Institute Name: {{ studentdata.institute_name|capfirst }}</h2>
+<h2>Location Name: {{ studentdata.location_name|capfirst }}</h2>
+<h2>Qualification:{{ studentdata.qualification|capfirst }}</h2>
+<a href="/student/">Index Page?</a>
+</body>
+</html>

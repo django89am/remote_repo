@@ -1,0 +1,28 @@
+html>
+<head>
+    <title>Student Names</title>
+</head>
+<style>
+    h1{
+        margin-left: 500px;
+        color: red;
+    }
+    #h11{
+        font-size: 50px;
+    }
+    body{
+        background-color: aqua;
+    }
+</style>
+<body>
+{% if list %}
+    <h1 id="h11">Student Names..</h1>
+    {% for i in list %}
+        <h1><a href="{% url 'detail' i.id  %}">{{ i.student_name|capfirst }}</a></h1>
+    {% endfor %}
+{% else %}
+<h2>No Students Found</h2>
+{% endif %}
+<h1><a href="/student/makeentry/">New Student?</a></h1>
+</body>
+</html>
